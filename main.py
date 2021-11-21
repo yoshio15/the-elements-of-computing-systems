@@ -24,3 +24,11 @@ def xor(x, y):
         return nand(x, y)
 
     return not_func(nand(x, y))
+
+
+# マルチプレクサ
+def multi_plexor(a, b, sel):
+    if not_func(or_func(sel, sel)):
+        return a
+
+    return b

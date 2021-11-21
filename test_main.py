@@ -25,3 +25,13 @@ class TestMain(TestCase):
         self.assertEqual(True, main.xor(0, 1))
         self.assertEqual(True, main.xor(1, 0))
         self.assertEqual(False, main.xor(1, 1))
+
+    def test_multi_plexor(self):
+        self.assertEqual(False, main.multi_plexor(0, 0, 0))
+        self.assertEqual(False, main.multi_plexor(0, 1, 0))
+        self.assertEqual(True, main.multi_plexor(1, 0, 0))
+        self.assertEqual(True, main.multi_plexor(1, 1, 0))
+        self.assertEqual(False, main.multi_plexor(0, 0, 1))
+        self.assertEqual(True, main.multi_plexor(0, 1, 1))
+        self.assertEqual(False, main.multi_plexor(1, 0, 1))
+        self.assertEqual(True, main.multi_plexor(1, 1, 1))
